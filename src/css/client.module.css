@@ -1,0 +1,320 @@
+.customerPage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.message {
+    width: 50%;
+    max-width: 90%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: var(--fs-sm);
+    position: fixed;
+    top: calc(100% - 2.5rem);
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: .5rem 1rem;
+    border-radius: var(--radius);
+    z-index: 1000;
+}
+
+.success {
+    background-color: var(--color-success);
+    color: white;
+}
+
+.error {
+    background-color: var(--color-error);
+    color: white;
+}
+
+.closeIcon {
+    cursor: pointer;
+}
+
+.confirmationDialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+    z-index: 1000;
+}
+
+.confirmationDialog p {
+    margin-bottom: 1rem;
+    font-size: var(--fs-sm);
+}
+
+.confirmationDialog button {
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    border: none;
+    border-color: var(--color-border);
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.confirmDeleteButton {
+    background-color: var(--color-success);
+    color: white;
+}
+
+.confirmDeleteButton:hover {
+    background-color: var(--color-success-hover);
+}
+
+.cancelButton {
+    background-color: var(--color-bg-soft);
+    color: var(--color-fg);
+}
+
+.cancelButton:hover {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+}
+
+.customerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.title {
+    font-size: var(--fs-xl);
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.deleteClientButton {
+    background-color: var(--color-error);
+    color: var(--color-fg);
+    font-size: var(--fs-sm);
+    cursor: pointer;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    transition: all var(--transition);
+}
+
+.deleteClientButton:hover {
+    background-color: transparent;
+    border: 1px solid var(--color-error);
+}
+
+.customer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.clientDetails {
+    background-color: var(--color-bg-soft);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.clientDocuments {
+    overflow-y: auto;
+    background-color: var(--color-bg-soft);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    min-height: 0;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.fieldGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.fieldGroupFull {
+    display: flex;
+    flex-direction: column;
+}
+
+.fieldGroupFull textarea {
+    resize: vertical;
+}
+
+.label {
+    font-weight: bold;
+    font-size: var(--fs-sm);
+    margin-bottom: 0.5rem;
+    color: var(--color-fg-muted);
+}
+
+.input {
+    font: inherit;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.input:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.saveButton {
+    grid-column: span 2;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: var(--radius);
+    margin-top: 1rem;
+    transition: background-color var(--transition);
+}
+
+.saveButton:hover {
+    background-color: var(--accent-color-hover);
+}
+
+.documentSection {
+    background-color: var(--color-bg-soft);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    height: fit-content;
+}
+
+.uploadButton {
+    font-size: var(--fs-sm);
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background var(--transition);
+}
+
+.uploadButton:hover {
+    background-color: var(--accent-color-hover);
+}
+
+.uploadInput {
+    display: none;
+}
+
+.fileList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.fileItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem .7rem;
+    border: solid 1px var(--color-border);
+    margin-bottom: .3rem;
+    border-radius: var(--radius);
+}
+
+.fileName {
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.fileName:hover {
+    text-decoration: underline;
+}
+
+.deleteIcon {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nameForm {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+    max-width: 600px;
+}
+
+.input {
+    font-size: var(--fs-sm);
+    width: 100%;
+}
+
+.addButton {
+    width: 100%;
+    font-size: var(--fs-sm);
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    text-align: center;
+    transition: background-color var(--transition);
+}
+
+.saveButton:hover {
+    background-color: var(--accent-color-hover);
+}
+
+.loaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.loader {
+    margin: 50px auto;
+    border: 3px solid var(--accent-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-right-color: transparent;
+    animation: anim 1.5s linear infinite;
+}
+
+@keyframes anim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,24 @@
+.container {
+    padding: 2rem;
+}
+
+.addButton {
+    font-size: var(--fs-sm);
+    margin-top: 1rem;
+    padding: 10px 50px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    text-align: center;
+    transition: background-color var(--transition);
+}
+
+.addButton a:hover {
+    color: white;
+}
+
+.addButton:hover {
+    background-color: var(--accent-color-hover);
+}

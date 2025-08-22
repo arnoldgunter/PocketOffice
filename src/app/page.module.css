@@ -1,0 +1,85 @@
+.landing {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,
+            var(--accent-color) 0%,
+            var(--color-bg-soft) 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.overlay {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.title span {
+    color: var(--accent-color);
+    background: white;
+    padding: 0 0.5rem;
+    border-radius: var(--radius);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.primaryBtn {
+    background-color: white;
+    color: var(--accent-color);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: all var(--transition);
+}
+
+.primaryBtn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.secondaryBtn {
+    border: 2px solid white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    transition: all var(--transition);
+}
+
+.secondaryBtn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.dashboardLink {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+}
+
+.dashboardLink:hover {
+    color: white;
+}

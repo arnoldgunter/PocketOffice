@@ -1,0 +1,96 @@
+.sidebar {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: .1rem solid var(--color-border);
+}
+
+.logoLink {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.searchInput {
+    font-size: var(--fs-sm);
+}
+
+.addButton {
+    font-size: var(--fs-sm);
+    margin-top: 1rem;
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    text-align: center;
+    transition: background-color var(--transition);
+}
+.addButton a:hover{
+    color: white;
+}
+.addButton:hover {
+    background-color: var(--accent-color-hover);
+}
+
+.customerList {
+    height: 100%;
+    margin-block: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: var(--fs-sm);
+    overflow-y: scroll;
+}
+
+.customerList a {
+    min-height: 40px;
+    padding: 10px;
+    background-color: var(--color-bg-soft);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all var(--transition);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.customerList a:hover {
+    background-color: var(--color-bg-hover);
+}
+
+.customerList a.active {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.footer {
+    margin-top: auto;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--color-bg-soft);
+    border: 1px solid var(--color-border);
+    padding: 10px;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.accountAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.accountName {
+    font-size: var(--fs-sm);
+    color: var(--color-text);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

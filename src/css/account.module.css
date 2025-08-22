@@ -1,0 +1,185 @@
+.accountPage {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    font-size: var(--fs-2xl);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.message {
+    font-size: var(--fs-sm);
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.error {
+    background-color: var(--color-error);
+    color: white;
+}
+
+.success {
+    background-color: var(--color-success);
+    color: white;
+}
+
+.info {
+    background-color: var(--muted-color);
+    color: var(--color-bg);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    font-size: 1rem;
+}
+
+.button,
+.buttonSecondary {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background var(--transition);
+    font-size: var(--fs-sm);
+}
+
+.button:hover {
+    background-color: var(--accent-color-hover);
+}
+
+.buttonSecondary {
+    background-color: #444;
+}
+
+.buttonSecondary:hover {
+    background-color: #666;
+}
+
+.loading {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.dangerZone {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid var(--color-error);
+    border-radius: var(--radius);
+}
+
+.dangerTitle {
+    font-size: var(--fs-lg);
+    color: var(--color-error);
+    margin-bottom: 1rem;
+    margin-top: 0px;
+}
+
+.deleteButton {
+    background-color: var(--color-error);
+    font-size: var(--fs-sm);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.deleteButton:hover {
+    background-color: #a00000;
+}
+
+.confirmationDialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+    z-index: 1000;
+}
+
+.confirmationDialog p {
+    margin-bottom: 1rem;
+    font-size: var(--fs-sm);
+}
+
+.confirmationDialog button {
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    border: none;
+    border-color: var(--color-border);
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.confirmDeleteButton {
+    background-color: var(--color-success);
+    color: white;
+}
+
+.confirmDeleteButton:hover {
+    background-color: var(--color-success-hover);
+}
+
+.cancelButton {
+    background-color: var(--color-bg-soft);
+    color: var(--color-fg);
+}
+
+.cancelButton:hover {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+}
+
+.loaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.loader {
+    margin: 50px auto;
+    border: 3px solid var(--accent-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-right-color: transparent;
+    animation: anim 1.5s linear infinite;
+}
+
+@keyframes anim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,32 @@
+.loginContainer {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 800px) {
+    .loginContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+}
+
+.loginBackground {
+    height: 100%;
+    background: linear-gradient(135deg,
+            var(--accent-color) 0%,
+            var(--color-bg-soft) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.formsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
