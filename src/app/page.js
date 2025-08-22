@@ -24,6 +24,10 @@ export default function Home() {
         <Link href="/dashboard" className={styles.dashboardLink}>
           Zum Dashboard
         </Link>
+
+        <Link href="/privacy" className={styles.privacyLink}>
+          Privacy Policy
+        </Link>
       </div>
     </div>
   );

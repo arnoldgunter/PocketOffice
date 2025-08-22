@@ -13,7 +13,8 @@ PocketOffice is a lightweight and efficient application for **managing clients a
 
 - Create, edit, and delete clients
 - Generate and manage invoices
-- Search and filter clients and invoices
+- Search and filter clients
+- Add notes to each client
 - Responsive UI built with Next.js
 - Real-time database interactions via Supabase
 
