@@ -1,6 +1,5 @@
 # PocketOffice
 ### Your personal office in your pocket
-=======
 
 ![PocketOffice Logo](./public/logo.png)
 
