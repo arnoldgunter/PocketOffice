@@ -7,24 +7,21 @@ const supabaseAdmin = createClient(
 );
 
 export async function POST(req) {
-    try {
-        const { userId } = await req.json();
-
-        if (!userId) {
-            return NextResponse.json({ error: 'userId fehlt' }, { status: 400 });
-        }
-
-        // Admin delete
-        const { error } = await supabaseAdmin.auth.admin.deleteUser(userId);
-
-        if (error) {
-            console.error('Supabase Fehler:', error);
-            return NextResponse.json({ error: error.message }, { status: 500 });
-        }
-
-        return NextResponse.json({ success: true });
-    } catch (err) {
-        console.error('Server Error:', err);
-        return NextResponse.json({ error: err.message }, { status: 500 });
+    const token = req.headers.get('authorization')?.replace('Bearer ', '');
+    if (!token) {
+        return NextResponse.json({ error: 'Nicht angemeldet' }, { status: 401 });
     }
+
+    const { data: { user }, error: authError } = await supabaseAdmin.auth.getUser(token);
+    if (authError || !user) {
+        return NextResponse.json({ error: 'Ungültiges Token' }, { status: 401 });
+    }
+
+    const { error } = await supabaseAdmin.auth.admin.deleteUser(user.id);
+    if (error) {
+        console.error('Supabase Fehler:', error);
+        return NextResponse.json({ error: 'Löschen fehlgeschlagen' }, { status: 500 });
+    }
+
+    return NextResponse.json({ success: true });
 }
